@@ -1,0 +1,56 @@
+<section class="container d-flex flex-column align-items-center">
+  <h1 class='title my-4'>你想對誰說幹話?</h1>
+  <form method="POST"  action="/">
+    <div class="positions d-flex justify-content-center mb-5">
+      <div class="position mr-5">
+        <div class="card" style="width: 18rem">
+          <img class="card-img-top" style="height:220px" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="Card image cap">
+        </div>
+        <div class="card-footer text-muted  d-flex justify-content-center align-items-center">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="position" id="engineer" value="engineer" {{#ifEquals options 'engineer' }} checked {{/ifEquals}}>
+            <label class="form-check-label" style="font-size:20px" for="engineer">
+              工程師
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="position mr-5">
+        <div class="card" style="width:18rem">
+          <img class="card-img-top" style="height:220px" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="Card image cap">
+          </div>
+          <div class="card-footer text-muted  d-flex justify-content-center align-items-center">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="position" id="designer" value="designer"  {{#ifEquals options 'designer' }} checked {{/ifEquals}}>
+              <label class="form-check-label" style="font-size:20px" for="engineer">
+                設計師
+              </label>
+            </div>
+          </div>
+        </div>
+      <div class="position">
+        <div class="card" style="width:18rem">
+          <img class="card-img-top" style="height:220px" src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="Card image cap">
+          </div>
+          <div class="card-footer text-muted  d-flex justify-content-center align-items-center">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="position" id="entrepreneur" value="entrepreneur"  {{#ifEquals options 'entrepreneur' }} checked {{/ifEquals}}>
+              <label class="form-check-label" style="font-size:20px" for="engineer">
+                創業家
+              </label>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row mx-auto" style="width:70vw">
+      <div class="col-sm-2" >
+        <button class="btn btn-warning" type="submit"style="font-size:18px">產生幹話</button>
+      </div>
+      <div class="col-sm-10">
+        <div class="form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="4">{{sentence}}</textarea>
+        </div>
+      </div>
+    </div>
+  </form>  
+</section>
